@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		2C52CBE01F8EE47100F06E31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52CBDF1F8EE47100F06E31 /* AppDelegate.swift */; };
-		2C52CBE21F8EE47100F06E31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52CBE11F8EE47100F06E31 /* ViewController.swift */; };
 		2C52CBE51F8EE47100F06E31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C52CBE31F8EE47100F06E31 /* Main.storyboard */; };
 		2C52CBE71F8EE47100F06E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C52CBE61F8EE47100F06E31 /* Assets.xcassets */; };
 		2C52CBEA1F8EE47100F06E31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C52CBE81F8EE47100F06E31 /* LaunchScreen.storyboard */; };
+		2C52CBF21F8EE54300F06E31 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52CBF11F8EE54300F06E31 /* DetailVC.swift */; };
+		2C52CBF41F8EE96B00F06E31 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52CBF31F8EE96B00F06E31 /* ListVC.swift */; };
+		2CFF36411F8EEB6E00A926CA /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF36401F8EEB6E00A926CA /* PageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C52CBDC1F8EE47000F06E31 /* WeatherGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C52CBDF1F8EE47100F06E31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C52CBE11F8EE47100F06E31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2C52CBE41F8EE47100F06E31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C52CBE61F8EE47100F06E31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C52CBE91F8EE47100F06E31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C52CBEB1F8EE47100F06E31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C52CBF11F8EE54300F06E31 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		2C52CBF31F8EE96B00F06E31 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
+		2CFF36401F8EEB6E00A926CA /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				2C52CBDF1F8EE47100F06E31 /* AppDelegate.swift */,
-				2C52CBE11F8EE47100F06E31 /* ViewController.swift */,
+				2CFF36401F8EEB6E00A926CA /* PageVC.swift */,
+				2C52CBF11F8EE54300F06E31 /* DetailVC.swift */,
+				2C52CBF31F8EE96B00F06E31 /* ListVC.swift */,
 				2C52CBE31F8EE47100F06E31 /* Main.storyboard */,
 				2C52CBE61F8EE47100F06E31 /* Assets.xcassets */,
 				2C52CBE81F8EE47100F06E31 /* LaunchScreen.storyboard */,
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C52CBE21F8EE47100F06E31 /* ViewController.swift in Sources */,
+				2C52CBF41F8EE96B00F06E31 /* ListVC.swift in Sources */,
+				2CFF36411F8EEB6E00A926CA /* PageVC.swift in Sources */,
 				2C52CBE01F8EE47100F06E31 /* AppDelegate.swift in Sources */,
+				2C52CBF21F8EE54300F06E31 /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +285,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2674F37353;
 				INFOPLIST_FILE = WeatherGift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huang.WeatherGift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2674F37353;
 				INFOPLIST_FILE = WeatherGift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huang.WeatherGift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
