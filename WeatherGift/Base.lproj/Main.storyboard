@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Mj-jj-x7V">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Mj-jj-x7V">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,6 +24,86 @@
         </array>
     </customFonts>
     <scenes>
+        <!--AboutVC-->
+        <scene sceneID="MeV-P9-UYc">
+            <objects>
+                <viewController id="tMo-MY-3fB" customClass="AboutVC" customModule="WeatherGift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vtU-Oj-APZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrl-89-FtV">
+                                <rect key="frame" x="16" y="630" width="37" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BIv-Oc-iuY"/>
+                                </constraints>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="tMo-MY-3fB" eventType="touchUpInside" id="5IK-SK-vsb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WeatherGift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkV-2g-1pG">
+                                <rect key="frame" x="16" y="48" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="xaB-dY-Fr3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fog" translatesAutoresizingMaskIntoConstraints="NO" id="W3K-7d-IUB">
+                                <rect key="frame" x="16" y="100" width="343" height="316"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made with love from Vincent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZQ-VX-m9X">
+                                <rect key="frame" x="16" y="424" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="dgb-nH-2kw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darksky" translatesAutoresizingMaskIntoConstraints="NO" id="nha-hg-fbE">
+                                <rect key="frame" x="16" y="495" width="122" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="OeD-nK-Yez"/>
+                                    <constraint firstAttribute="width" constant="122" id="o9t-Q5-OJg"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="powered_by_google_on_white" translatesAutoresizingMaskIntoConstraints="NO" id="2j3-j4-fdc">
+                                <rect key="frame" x="146" y="492" width="213" height="71"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nha-hg-fbE" firstAttribute="top" secondItem="2ZQ-VX-m9X" secondAttribute="bottom" constant="11" id="0KV-eF-zAS"/>
+                            <constraint firstItem="2ZQ-VX-m9X" firstAttribute="trailing" secondItem="2j3-j4-fdc" secondAttribute="trailing" id="1lD-xW-hRC"/>
+                            <constraint firstItem="vkV-2g-1pG" firstAttribute="trailing" secondItem="vtU-Oj-APZ" secondAttribute="trailingMargin" id="3SD-7I-rXg"/>
+                            <constraint firstItem="vkV-2g-1pG" firstAttribute="leading" secondItem="vtU-Oj-APZ" secondAttribute="leadingMargin" id="AoP-d8-IJO"/>
+                            <constraint firstItem="vkV-2g-1pG" firstAttribute="leading" secondItem="W3K-7d-IUB" secondAttribute="leading" id="CaL-uM-ixY"/>
+                            <constraint firstItem="2h4-xh-WIO" firstAttribute="bottom" secondItem="wrl-89-FtV" secondAttribute="bottom" constant="7" id="FLv-f1-9W7"/>
+                            <constraint firstItem="W3K-7d-IUB" firstAttribute="leading" secondItem="2ZQ-VX-m9X" secondAttribute="leading" id="IWb-7T-KLx"/>
+                            <constraint firstItem="W3K-7d-IUB" firstAttribute="top" secondItem="vkV-2g-1pG" secondAttribute="bottom" constant="8" symbolic="YES" id="LbF-6I-wmz"/>
+                            <constraint firstItem="2ZQ-VX-m9X" firstAttribute="leading" secondItem="nha-hg-fbE" secondAttribute="leading" id="QCX-1k-8le"/>
+                            <constraint firstItem="W3K-7d-IUB" firstAttribute="trailing" secondItem="2ZQ-VX-m9X" secondAttribute="trailing" id="QWx-wb-U3O"/>
+                            <constraint firstItem="2j3-j4-fdc" firstAttribute="top" secondItem="2ZQ-VX-m9X" secondAttribute="bottom" constant="8" symbolic="YES" id="ZbA-JM-eHm"/>
+                            <constraint firstItem="2j3-j4-fdc" firstAttribute="leading" secondItem="nha-hg-fbE" secondAttribute="trailing" constant="8" symbolic="YES" id="bah-JH-RAu"/>
+                            <constraint firstItem="vkV-2g-1pG" firstAttribute="top" secondItem="2h4-xh-WIO" secondAttribute="top" constant="28" id="bgC-Ji-Z9l"/>
+                            <constraint firstItem="vkV-2g-1pG" firstAttribute="trailing" secondItem="W3K-7d-IUB" secondAttribute="trailing" id="cqz-7m-Kcp"/>
+                            <constraint firstItem="2h4-xh-WIO" firstAttribute="bottom" secondItem="2j3-j4-fdc" secondAttribute="bottom" constant="104" id="g7A-Gx-UUc"/>
+                            <constraint firstItem="wrl-89-FtV" firstAttribute="top" secondItem="nha-hg-fbE" secondAttribute="bottom" constant="64" id="inv-67-lvg"/>
+                            <constraint firstItem="nha-hg-fbE" firstAttribute="leading" secondItem="wrl-89-FtV" secondAttribute="leading" id="lBN-KP-cnm"/>
+                            <constraint firstItem="2ZQ-VX-m9X" firstAttribute="top" secondItem="W3K-7d-IUB" secondAttribute="bottom" constant="8" symbolic="YES" id="yLl-TE-bke"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2h4-xh-WIO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DDk-En-kJc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-651" y="196"/>
+        </scene>
         <!--DetailVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -216,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="116.74876847290641"/>
+            <point key="canvasLocation" x="162" y="227"/>
         </scene>
         <!--PageVC-->
         <scene sceneID="xDh-cJ-25Y">
@@ -224,6 +305,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="2Mj-jj-x7V" customClass="PageVC" customModule="WeatherGift" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="uRg-gT-WT1" kind="presentation" identifier="ToListVC" id="Lr5-5d-zsG"/>
+                        <segue destination="tMo-MY-3fB" kind="presentation" identifier="ToAboutVC" id="0DV-nm-VC8"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mpS-sv-ILQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -312,6 +394,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="darksky" width="1904" height="759"/>
+        <image name="fog" width="948" height="1264"/>
+        <image name="powered_by_google_on_white" width="144" height="18"/>
         <image name="raindrop" width="18" height="20"/>
         <image name="small-cloudy" width="384" height="384"/>
     </resources>
